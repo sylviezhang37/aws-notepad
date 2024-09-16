@@ -25,7 +25,7 @@ export async function fetchNotes() {
 
 export async function createNote(form) {
   const { data: newNote } = await client.models.Note.create({
-    name: form.get("name"),
+    title: form.get("title"),
     description: form.get("description"),
     image: form.get("image").name,
   });

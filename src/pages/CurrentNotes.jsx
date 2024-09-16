@@ -37,7 +37,7 @@ export default function CurrentNotes({ notes, handleDeleteNote }) {
               <Image
                 src={note.image}
                 alt={`visual aid for ${note.title}`}
-                style={{ width: 400 }}
+                style={{ width: 200 }}
               />
             )}
             <Button
