@@ -11,7 +11,7 @@ export default function CurrentNotes({ notes, handleDeleteNote }) {
       width="70%"
       margin="0 auto"
     >
-      <Heading level={2}>Notes</Heading>
+      <Heading level={3}>Notes</Heading>
       <Grid
         margin="3rem 0"
         autoFlow="column"

@@ -42,7 +42,7 @@ export default function NoteForm({ handleCreateNote, handleFileChange, fileName,
           <View
             as="textarea"
             name="description"
-            placeholder="Description"
+            placeholder="  ...  "
             rows={3}
             style={{
               width: '100%',
