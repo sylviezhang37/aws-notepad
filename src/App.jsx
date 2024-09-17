@@ -66,7 +66,12 @@ export default function App() {
             />
             <Route
               path="/current-notes"
-              element={<CurrentNotes notes={notes} handleDeleteNote={handleDeleteNote} />}
+              element={
+                <CurrentNotes 
+                  notes={notes} 
+                  handleDeleteNote={handleDeleteNote} 
+                />
+              }
             />
           </Routes>
         </Router>

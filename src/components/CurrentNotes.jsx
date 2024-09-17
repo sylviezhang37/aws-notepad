@@ -1,34 +1,19 @@
 import React from "react";
 import { Heading, Grid, Flex, Text, Image, Button } from "@aws-amplify/ui-react";
+import styles from '../styles'; 
 
 export default function CurrentNotes({ notes, handleDeleteNote }) {
   return (
     <Flex
       className="CurrentNotes"
-      justifyContent="center"
-      alignItems="center"
-      direction="column"
-      width="70%"
-      margin="0 auto"
+      style={styles.currentNotesContainer}
     >
       <Heading level={3}>Notes</Heading>
-      <Grid
-        margin="3rem 0"
-        autoFlow="column"
-        justifyContent="center"
-        gap="2rem"
-        alignContent="center"
-      >
+      <Grid style={styles.noteGrid}>
         {notes.map((note) => (
           <Flex
             key={note.id || note.title}
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-            gap="2rem"
-            border="1px solid #ccc"
-            padding="2rem"
-            borderRadius="5%"
+            style={styles.noteBox} 
             className="box"
           >
             <Heading level={3}>{note.title}</Heading>
@@ -37,7 +22,7 @@ export default function CurrentNotes({ notes, handleDeleteNote }) {
               <Image
                 src={note.image}
                 alt={`visual aid for ${note.title}`}
-                style={{ width: 200 }}
+                style={styles.noteImage}
               />
             )}
             <Button

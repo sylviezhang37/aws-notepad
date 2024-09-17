@@ -8,29 +8,23 @@ import {
   Image,
 } from "@aws-amplify/ui-react";
 import { Link } from "react-router-dom";
-import appLogo from '../assets/notepad.png'; 
+import appLogo from '../assets/notepad.png';
+import styles from '../styles'; 
 
 export default function NoteForm({ handleCreateNote, handleFileChange, fileName, signOut }) {
   return (
     <Flex
       className="App"
-      justifyContent="center"
-      alignItems="center"
-      direction="row"
-      width="80%"
-      margin="0 auto"
+      style={styles.newNoteContainer}
     >
       <Image
         src={appLogo}
         alt="AppLogo"
-        style={{ width: 150, marginBottom: "1rem" }}
+        style={styles.appLogo} 
       />
       <View as="form" margin="2rem" onSubmit={handleCreateNote}>
         <Flex
-          direction="column"
-          justifyContent="center"
-          gap="2rem"
-          padding="1rem"
+          style={styles.formContainer}
         >
           <TextField
             name="title"
@@ -44,13 +38,7 @@ export default function NoteForm({ handleCreateNote, handleFileChange, fileName,
             name="description"
             placeholder="  ...  "
             rows={3}
-            style={{
-              width: '100%',
-              resize: 'vertical',
-              padding: '0.5rem',
-              fontSize: '1rem',
-              borderRadius: '5px'
-            }}
+            style={styles.textArea} 
           />
 
           <View
@@ -69,12 +57,12 @@ export default function NoteForm({ handleCreateNote, handleFileChange, fileName,
           </Button>
 
           <Link to="/current-notes">
-            <Button variation="primary" style={{ width: "100%" }}>
+            <Button variation="primary" style={styles.fullWidthButton}>
               Existing Notes
             </Button>
           </Link>
 
-          <Button onClick={signOut} style={{ flex: 1 }}>
+          <Button onClick={signOut} style={styles.signOutButton}>
             Sign Out
           </Button>
         </Flex>
