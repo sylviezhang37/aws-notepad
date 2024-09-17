@@ -6,4 +6,4 @@
 - TypeScript / JavaScript
 
 
-![Screenshot 2024-09-16 at 4 19 58 PM](https://github.com/user-attachments/assets/a3863538-0f75-4a41-b804-5089f6ddd009)
+![Screenshot 2024-09-16 at 10 09 33 PM](https://github.com/user-attachments/assets/e07dec90-4133-4195-a0bb-e39b9624899a)
